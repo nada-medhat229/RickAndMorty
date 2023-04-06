@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <section class="container">
+    <h1 class="text-center my-4"> Rick and Morty</h1>
+    <FillterStatus/>
+    <ListCharacter/>
+
+  </section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ListCharacter from './components/ListCharacter.vue';
+import FillterStatus from './components/FillterStatus.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ListCharacter,
+    FillterStatus
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+:root{
+  --background-body:#24282f;
+  --background-card:#3c3e44;
+  --text-white:#ffffff;
+  --text-gray:#c0c0c0;
+  --text-orange:#ff9800;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: var(--background-body) !important;
+  color: var(--text-white) !important;
 }
 </style>
