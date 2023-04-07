@@ -2,6 +2,7 @@
   <section class="container">
     <h1 class="text-center my-4"> Rick and Morty</h1>
     <FillterStatus/>
+    <FillterByName/>
     <ListCharacter/>
 
   </section>
@@ -10,11 +11,12 @@
 <script>
 import ListCharacter from './components/ListCharacter.vue';
 import FillterStatus from './components/FillterStatus.vue';
+import FillterByName from './components/FillterByName.vue';
 export default {
   name: 'App',
   components: {
     ListCharacter,
-    FillterStatus
+    FillterStatus,FillterByName
   }
 }
 </script>
